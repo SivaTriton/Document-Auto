@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+    <input type="file" (change)="onFileChange($event)" />
+    <button type="submit">Upload</button>
+  </form>
+  
+  <div *ngIf="extractedFields">
+    <h3>Extracted Data:</h3>
+    <p><strong>Name:</strong> {{ extractedFields.name }}</p>
+    <p><strong>Document No:</strong> {{ extractedFields.documentNo }}</p>
+    <p><strong>Certificate No:</strong> {{ extractedFields.certificateNo }}</p>
+    <p><strong>PAN No:</strong> {{ extractedFields.panNo }}</p>
+    <p><strong>Address:</strong> {{ extractedFields.address }}</p>
+    <p><strong>Mobile No:</strong> {{ extractedFields.mobileNo }}</p>
+    <p><strong>Email:</strong> {{ extractedFields.email }}</p>
+  </div>
+  
